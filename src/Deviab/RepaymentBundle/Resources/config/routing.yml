@@ -1,0 +1,11 @@
+withdrawal_request:
+    pattern:     /withdrawal-request
+    defaults: { _controller: DeviabRepaymentBundle:Repayment:withdrawalRequest}
+    requirements: {_method: POST}
+
+repay_lenders:
+    pattern:     /{amount}
+    defaults: { _controller: DeviabRepaymentBundle:Repayment:repayLender}
+    requirements:
+        _method: GET
+        projectId: "\d+"

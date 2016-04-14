@@ -1,0 +1,230 @@
+<style>
+    .modal-title {
+        color: #999;
+        font-size: 14px;
+        text-align: center;
+    }
+    .modal-footer {
+        color: #bbb;
+        font-size: 11px;
+        text-align: left;
+    }
+    #withdraw-form {
+        color: #999;
+    }
+    #trasaction-table-container {
+        min-height: 200px;
+    }
+</style>
+<div class="space"></div>
+<div class="container text-center" ng-controller="ProfileController as pf">
+    <div class="col-lg-offset-1 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <div class="grey-border">
+            <div>Available Credit</div>
+            <div>₹<span class="loading"></span>{[{profileResponce.lenderWalletBalance}]}</div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 m-b-20">
+        <div class="grey-border">
+            <div>EMR</div>
+            <div class="loading-container">₹<span class="loading"></span>
+                {[{profileResponce.expectedMonthlyReturn}]}
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12">
+         <a id="register-btn" data-toggle="modal" data-target="#withdraw-modal">
+            <div class=" col-lg-12 col-md-3 col-sm-12 col-xs-12 text-center">
+                <div id="withdraw-now" class=""><span>Withdraw</span></div>
+            </div>
+        </a>
+    </div>
+
+    <div class="space container-fluid"></div>
+    <div class="space"></div>
+    <div class="text-center col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class=" text-center"><h3><span id="investment-summary-text">Investment Summary</span></h3>
+        </div>
+        <div class="space"></div>
+        <div class="col-lg-offset-3 col-lg-3 col-md-6 col-sm-12 col-xs-12">
+            <div class="grey-border">
+                Total Investment = ₹<span class="loading"></span><span style="min-width:50px">{[{profileResponce.totalInvestment}]}</span>
+            </div>
+            <br>
+
+            <div class="grey-border">
+                Amount Withdrawn = ₹<span class="loading"></span><span style="min-width:50px">{[{profileResponce.amountWithdrawn}]}</span>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th class="text-center">Total Repayment</th>
+                        <th class="text-center" style="min-width:100px">₹<span class="loading"></span>{[{profileResponce.principalRepayment + profileResponce.interestRepayment}]}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Principal Repayment</td>
+                        <td style="min-width:100px">₹<span class="loading"></span>{[{profileResponce.principalRepayment}]}</td>
+                    </tr>
+                    <tr>
+                        <td>Interest Repayment</td>
+                        <td style="min-width:100px">₹<span class="loading"></span>{[{profileResponce.interestRepayment}]}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="container border tmrgn-25"></div>
+    <div class="container">
+            <h3 class="text-center"><span id="transaction-details-text">Transaction Details</span></h3>
+            <div class="col-md-offset-2 col-md-8 col-xs-12">
+                <div id="trasaction-table-container" class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th style="text-align:center">Transaction</th>
+                                <th style="text-align:center">Time</th>
+                                <th style="text-align:center">Amount</th>
+                                <th style="text-align:center">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="debit in profileResponce.transactions">
+                                <td>{[{debit.txnid}]}</td>
+                                <td>{[{debit.timestamp}]}</td> 
+                                <td>{[{debit.amount}]}</td>
+                                <td>{[{debit.type}]}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+</div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="withdraw-modal" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">
+                Withdraw funds to your bank account in India.
+            </h4>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <form id='withdraw-form' role="form">
+                <div class="form-group">
+                    <label for="signin-email" class="pull-left">Account Holder's Name</label>
+                    <input type="text" class="form-control" id="ac-holder-name" name="ac-holder-name"
+                           placeholder="Enter Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="ac-number" class="pull-left">Account Number</label>
+                    <input type="text" class="form-control" id="ac-number" name="ac-number"
+                           placeholder="Enter A/C Number" required>
+                </div>
+                <div class="form-group">
+                    <label for="bank-name" class="pull-left">Bank Name:</label>
+                    <input type="text" class="form-control" id="bank-name" name="bank-name"
+                           placeholder="Enter Bank Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="bank-name" class="pull-left">IFSC Code</label>
+                    <input type="text" class="form-control" id="ifsc-code" name="ifsc-code"
+                           placeholder="Enter IFSC Code" required>
+                </div>
+                <button id="submit-withdraw-btn" class="btn btn-lg btn-primary btn-block">Submit</button><br/>
+            </form>
+        </div>
+        <div class="modal-footer">
+            Usually it takes 3 working days to process your request.
+          <button id="withdraw-close-btn" type="button" class="btn btn-default pull-right" data-dismiss="modal">Close</button>
+        </div>
+        <div id="withdraw-msg-container" class="error h-25 text-center" ><span id="withdraw-pass-msg"></span></div>
+      </div>
+    </div>
+</div>
+</div>
+
+
+<script type="text/javascript">
+    $("#nav-dashboard-link").css("color", "#0070B9");
+    $("#ac-number").keypress(function (e) {
+            if (e.which < 48 || e.which > 57) {
+                return false;
+            }
+        });
+    $("#submit-withdraw-btn").click(function() {
+        var ac_holder_name = $("#ac-holder-name").val();
+        var ac_number = $("#ac-number").val();
+        var bank_name = $("#bank-name").val();
+        var ifsc_code = $("#ifsc-code").val();
+
+        
+        var jsonData = {
+                            "account_number" : ac_holder_name,
+                            "ifsc_code" : ifsc_code,
+                            "account_name" : ac_number ,
+                            "bank_name" : bank_name
+                        }
+        console.log(jsonData);
+        
+
+        $('#withdraw-form input:text').each(function() {
+            var id = $(this).attr('id');
+            if($("#"+id).val() == "") {
+                $("#"+id).focus();
+                return false;
+            }
+        });
+        if(ac_holder_name =="" || ac_number =="" ||  bank_name == "" || ifsc_code == "") {
+            return false;
+        }
+        $(".se-pre-con-login").show();
+        $.ajax({
+                url: "/api/v1/repayment/withdrawal-request",
+                type: 'POST',
+                data: jsonData,
+                success: function (result) {
+                    $('#withdraw-pass-msg').html(result['success']).show().fadeOut(4000);
+                    $(".se-pre-con-login").fadeOut("slow");
+                    $('#withdraw-close-btn').click();
+                },
+                error: function (errorMessage) {
+                    console.log(errorMessage);
+                    $('#withdraw-pass-msg').html(errorMessage.responseJSON.error).show().fadeOut(4000);
+                    $(".se-pre-con-login").fadeOut("slow");
+                },
+            });
+    });
+function getDateFromMilisec(milisec) {
+    var d = new Date(milisec);
+    var year = d.getFullYear(),
+        month = d.getMonth()+1,
+        date = d.getDate(),
+        h = d.getHours(),
+        m = d.getMinutes(),
+        s = d.getSeconds();
+        return(date + '-' + month + '-' + year)
+    // return(year+':'+ month +':'+date+':'+ h +':'+ m +':'+ s);
+}
+function getTimeFromMilisec(milisec) {
+    var d = new Date(milisec);
+    var year = d.getFullYear(),
+        month = d.getMonth()+1,
+        date = d.getDate(),
+        h = d.getHours(),
+        m = d.getMinutes(),
+        s = d.getSeconds();
+        return(h +':'+ m +':'+ s);
+    // return(year+':'+ month +':'+date+':'+ h +':'+ m +':'+ s);
+}
+</script>

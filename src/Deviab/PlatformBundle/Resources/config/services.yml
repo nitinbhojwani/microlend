@@ -1,0 +1,8 @@
+services:
+#    deviab_platform.example:
+#        class: Deviab\PlatformBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
+
+    deviab_platform.mailer:
+        class: Deviab\PlatformBundle\Services\MailerService
+        arguments: [@mailer]

@@ -1,0 +1,21 @@
+Deviab\DatabaseBundle\Entity\MasterStates:
+    type: entity
+    table: master_states
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        stateName:
+            type: string
+            nullable: false
+            length: 45
+            fixed: false
+            comment: ''
+            column: state_name
+    lifecycleCallbacks: {  }

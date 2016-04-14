@@ -1,0 +1,25 @@
+get_project_status:
+    pattern:  /{projectId}
+    defaults: { _controller: DeviabBorrowerBundle:Project:getProject}
+    requirements:
+       _method: GET
+       projectId: "\d+"
+
+get_featured_project:
+    pattern:  featured-project/{projectId}
+    defaults: { _controller: DeviabBorrowerBundle:Project:getFeaturedProject}
+    requirements:
+       _method: GET
+       projectId: "\d+"
+
+payu_success_webhook:
+    pattern:  /webhook/success
+    defaults: { _controller: DeviabBorrowerBundle:Project:payuSuccessWebhook}
+    requirements:
+        _method: POST
+
+payu_failure_webhook:
+    pattern:  /webhook/failure
+    defaults: { _controller: DeviabBorrowerBundle:Project:payuSuccessWebhook}
+    requirements:
+        _method: POST

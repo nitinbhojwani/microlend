@@ -1,0 +1,75 @@
+<div id="home-bc-img" class="img-responsive page-height no-padd">
+    <img id="home-bc-img" src="https://s3-ap-southeast-1.amazonaws.com/lytyfy/web_assets/home_bg.png" class="img-responsive">
+    <!-- </div>
+    <div id="banner">
+        <img id="bc-img-banner" src="/bundles/fabric/images/index/banner.jpg" class="img-responsive">
+    </div> -->
+</div>
+<div id="home-project-details" class="container-fluid tmrgn-25" ng-controller="HomeController">
+    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 text-center tmrgn-25">
+        <div class="project-details"><span> <span class="loading"></span>{[{indexResponce.backers}]} Investors</span>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 text-center tmrgn-25">
+        <div class="project-details"><span> ₹ <span
+                class="loading"></span> {[{indexResponce.quantum}]} Raised</span></div>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 text-center tmrgn-25">
+        <div class="project-details"><span>28 Days To Go</span></div>
+    </div>
+    <a id="register-btn" href="/#/project">
+        <div class=" col-lg-3 col-md-3 col-sm-12 col-xs-12 text-center tmrgn-25">
+            <div id="invest-now" class="project-details"><span>Invest Now</span></div>
+        </div>
+    </a>
+</div>
+<div id="about-container" class="container-fluid">
+    <div id="about-energy-desc">
+        1.4 billion people in the world have no access to power and 400 million of them live in rural India. Lytyfy aims
+        to eradicate energy inequity in India and our mission is to provide reliable and affordable energy services to
+        low income rural customers. We promote clean energy access in rural India by synergizing community engagement, technology and finance.
+    </div>
+    <div class="container border tmrgn-25"></div>
+</div>
+<div id="solutions-outer-container" class="container tmrgn-50">
+    <div id="solutions-container" class="row">
+        <div class=" container col-lg-4 col-md-4 col-sm-4">
+            <div id="solution-img" class="graphics"></div>
+            <div id="solution-desc">
+                Lytyfy helps in providing quality solar energy solutions to low income rural families at their
+                doorsteps.
+            </div>
+            <div class="border-margin visible-xs"></div>
+        </div>
+        <div class=" container col-lg-4 col-md-4 col-sm-4">
+            <div id="csr-img" class="graphics"></div>
+            <div id="consulting-desc">
+                The major stumbling block in alleviating energy poverty is lack of access to finance and we provide covenient hassle free energy loans to our customers.
+            </div>
+            <div class="border-margin visible-xs"></div>
+        </div>
+        <div class="container col-lg-4 col-md-4 col-sm-4">
+            <div id="consulting-img" class="graphics"></div>
+            <div id="csr-desc" class="sl-box1">
+                We support the creation of self sustaining markets and factor in customer's ability to pay while
+                designing energy and credit solutions for them.
+            </div>
+        </div>
+    </div>
+</div>
+<div class="tmrgn-50"></div>
+<script>
+    $("#home-bc-img").load(function () {
+        // Handler for .load() called.
+    });
+    var h = $(window).height();
+    var w = $(window).width();
+    if (w < 765)
+        $("#home-bc-img").css("height", (h - nav_height) / 2);
+
+</script>
+<style>
+    #nav-home-link {
+        color: #0070B9;
+    }
+</style>

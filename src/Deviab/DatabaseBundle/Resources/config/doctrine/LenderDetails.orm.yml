@@ -1,0 +1,95 @@
+Deviab\DatabaseBundle\Entity\LenderDetails:
+    type: entity
+    table: lender_details
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        fname:
+            type: string
+            nullable: false
+            length: 45
+            fixed: false
+            comment: ''
+        lname:
+            type: string
+            nullable: true
+            length: 45
+            fixed: false
+            comment: ''
+        address:
+            type: string
+            nullable: true
+            length: 45
+            fixed: false
+            comment: ''
+        gender:
+            type: string
+            nullable: true
+            length: 10
+            fixed: false
+            comment: ''
+        dob:
+            type: date
+            nullable: true
+            comment: ''
+        primaryMobileNumber:
+            type: string
+            nullable: true
+            length: 45
+            fixed: false
+            comment: ''
+            column: primary_mobile_number
+        profilePic:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: ''
+            column: profile_pic
+        googleId:
+            type: string
+            nullable: true
+            length: 45
+            fixed: false
+            comment: ''
+            column: google_id
+        facebookId:
+            type: string
+            nullable: true
+            length: 45
+            fixed: false
+            comment: ''
+            column: facebook_id
+    oneToOne:
+        currentStatus:
+            targetEntity: Deviab\RepaymentBundle\Entity\LenderCurrentStatus
+            cascade: ["persist"]
+            mappedBy: lender
+        wallet:
+            targetEntity: Deviab\RepaymentBundle\Entity\LenderWallet
+            cascade: ["persist"]
+            mappedBy: lender
+        user:
+            type: integer
+            nullable: true
+            targetEntity: Deviab\LoginBundle\Entity\User
+            cascade: ["persist"]
+            inversedBy: lender 
+            column: user_id
+    oneToMany:
+        fromLenderTransactions:
+            targetEntity: Deviab\TransactionBundle\Entity\LenderDeviabTransaction
+            cascade: ["persist"]
+            mappedBy: lender
+        toLenderTransactions:
+            targetEntity: Deviab\TransactionBundle\Entity\DeviabLenderTransaction
+            cascade: ["persist"]
+            mappedBy: lender
+    lifecycleCallbacks: {  }

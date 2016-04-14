@@ -1,0 +1,101 @@
+Deviab\DatabaseBundle\Entity\BorrowerDetails:
+    type: entity
+    table: borrower_details
+    indexes:
+        fk_village_id_idx:
+            columns:
+                - village_id
+        fk_project_id_idx:
+            columns:
+                - project_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        fname:
+            type: string
+            nullable: false
+            length: 45
+            fixed: false
+            comment: ''
+        lname:
+            type: string
+            nullable: false
+            length: 45
+            fixed: false
+            comment: ''
+        address:
+            type: string
+            nullable: true
+            length: 45
+            fixed: false
+            comment: ''
+        tolla:
+            type: string
+            nullable: false
+            length: 45
+            fixed: false
+            comment: ''
+        gender:
+            type: string
+            nullable: false
+            length: 10
+            fixed: false
+            comment: ''
+        dob:
+            type: date
+            nullable: false
+            comment: ''
+        highestEducation:
+            type: string
+            nullable: true
+            length: 45
+            fixed: false
+            comment: ''
+            column: highest_education
+        primaryMobileNumber:
+            type: string
+            nullable: false
+            length: 45
+            fixed: false
+            comment: ''
+            column: primary_mobile_number
+        occupation:
+            type: string
+            nullable: true
+            length: 45
+            fixed: false
+            comment: ''
+        annualIncome:
+            type: float
+            nullable: false
+            precision: 10
+            scale: 0
+            comment: ''
+            column: annual_income
+    manyToOne:
+        village:
+            targetEntity: MasterVillages
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                village_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        project:
+            targetEntity: Project
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                project_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

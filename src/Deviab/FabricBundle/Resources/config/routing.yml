@@ -1,0 +1,8 @@
+fabric_homepage:
+    path:     /
+    defaults: { _controller: FabricBundle:Default:index }
+
+payu_transaction_result:
+    path:     /transaction/post/{status}
+    defaults: { _controller: FabricBundle:TransactionResult:transactionResult }
+    requirements: {_method: POST}

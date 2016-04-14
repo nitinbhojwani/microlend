@@ -1,0 +1,47 @@
+Deviab\DatabaseBundle\Entity\BorrowerLoanDetails:
+    type: entity
+    table: borrower_loan_details
+    indexes:
+        fk_borrower_id_idx:
+            columns:
+                - borrower_id
+        fk_operational_id_idx:
+            columns:
+                - operational_strategy_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        userStory:
+            type: text
+            nullable: true
+            length: null
+            fixed: false
+            comment: ''
+            column: user_story
+    manyToOne:
+        borrower:
+            targetEntity: BorrowerDetails
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                borrower_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        operationalStrategy:
+            targetEntity: LoanOperationalStrategies
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                operational_strategy_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

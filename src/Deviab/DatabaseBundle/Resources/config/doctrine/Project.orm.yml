@@ -1,0 +1,30 @@
+Deviab\DatabaseBundle\Entity\Project:
+    type: entity
+    table: projects
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        capitalAmount:
+            type: float
+            nullable: false
+            comment: ''
+
+    oneToMany:
+        borrowers:
+            targetEntity: BorrowerDetails
+            mappedBy: project
+        toProjectLenderTransactions:
+            targetEntity: Deviab\TransactionBundle\Entity\LenderDeviabTransaction
+            mappedBy: project
+        fromProjectLenderTransactions:
+            targetEntity: Deviab\TransactionBundle\Entity\DeviabLenderTransaction
+            mappedBy: project
+
+    lifecycleCallbacks: {  }

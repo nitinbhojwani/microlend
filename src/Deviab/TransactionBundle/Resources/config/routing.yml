@@ -1,0 +1,17 @@
+dashboard:
+    pattern:  /{lenderId}
+    defaults: { _controller: DeviabTransactionBundle:Investment:getLenderInvestment}
+    requirements:
+        _method: GET
+        lenderId: "\d+"
+
+form_data_for_payu:
+    pattern:  /{lenderId}/fd
+    defaults: { _controller: DeviabTransactionBundle:Investment:transaction}
+    requirements:
+        _method: GET
+        lenderId: "\d+"
+
+
+
+

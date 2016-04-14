@@ -1,0 +1,40 @@
+Deviab\DatabaseBundle\Entity\BorrowerImages:
+    type: entity
+    table: borrower_images
+    indexes:
+        fk_borrower_id_idx:
+            columns:
+                - borrower_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        isProfilePic:
+            type: boolean
+            nullable: false
+            comment: ''
+            column: is_profile_pic
+        imageUrl:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+            column: image_url
+    manyToOne:
+        borrower:
+            targetEntity: BorrowerDetails
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                borrower_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

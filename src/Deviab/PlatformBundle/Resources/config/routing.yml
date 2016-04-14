@@ -1,0 +1,3 @@
+deviab_platform_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: DeviabPlatformBundle:Default:index }

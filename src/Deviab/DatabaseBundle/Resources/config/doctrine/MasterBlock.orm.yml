@@ -1,0 +1,35 @@
+Deviab\DatabaseBundle\Entity\MasterBlock:
+    type: entity
+    table: master_block
+    indexes:
+        fk_district_id_idx:
+            columns:
+                - district_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        blockName:
+            type: string
+            nullable: false
+            length: 45
+            fixed: false
+            comment: ''
+            column: block_name
+    manyToOne:
+        district:
+            targetEntity: MasterDistrict
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                district_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

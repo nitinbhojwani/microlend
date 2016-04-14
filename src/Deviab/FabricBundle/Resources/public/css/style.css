@@ -1,0 +1,384 @@
+body {
+    font: 14px/21px "Montserrat", sans-serif;
+    font-size: 15px;
+    text-align: justify;
+    color: black;
+    letter-spacing: 2px;
+}
+
+@font-face {
+    font-family: 'neuropol';
+    src: url(NEUROPOL.ttf);
+}
+
+#back-img {
+    background-repeat: no-repeat;
+    margin: auto;
+}
+
+#back-img img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    vertical-align: middle;
+    margin: auto;
+}
+
+#banner {
+    text-align: center;
+    font-size: 30px;
+    color: #777;
+    font-family: fantasy;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-top: 18px;
+}
+
+.backstretch {
+    z-index: 0;
+}
+
+.banner-text {
+    margin-top: 170px;
+}
+
+.width {
+    width: 57% !important;
+}
+
+.header01 {
+    color: #0070B9;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#about-container {
+    color: black;
+    text-align: justify;
+}
+
+#about-deviab {
+    color: #464646;
+}
+
+.navbar {
+    border-radius: 0px;
+}
+
+.navbar-nav > li > a {
+    padding-top: 15px !important;
+}
+
+.navfix {
+    z-index: 100;
+    background-color: #FFF;
+}
+
+.tm, .am, .cs, .cns, {
+    color: #929292;
+}
+
+.abs a:hover {
+    color: #0070B9;
+}
+
+.abs a:active {
+    color: #0070B9;
+}
+
+a {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.abs {
+    position: absolute;
+    z-index: 100;
+    color: black;
+    font-family: Snippet;
+    font-style: oblique;
+    font-size: 16px;
+    text-align: justify;
+}
+
+#solar-solution, #joinus {
+    color: black;
+}
+
+#member-desc {
+}
+
+#designation {
+    font-size: 10px;
+}
+
+#solutions-container {
+    line-height: 26px;
+    text-align: center;
+    padding-right: 5px !important;
+    padding-left: 5px !important;
+    color: #777;
+    font-weight: 400px;
+    /*background: green;*/
+}
+
+#careers-container {
+    height: 200px;
+    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#deepak-img, #vishnu-img {
+    height: 150px;
+}
+
+#graph {
+    height: 250px;
+    background-image: url(../images/index/chart.jpg);
+    background-repeat: no-repeat;
+}
+
+#twitter {
+    height: 250px;
+    background: #C0C0C0;
+}
+
+#contactus {
+    padding-top: 100px;
+    height: 150px;
+    text-align: center;
+    font-size: 24px;
+    background: #979797;
+    color: #FFF;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #0070B9;
+    margin: 20px 5px;
+}
+
+#nm {
+    color: #3B78E7;
+    font-weight: bold;
+}
+
+.ofg {
+    color: #3B78E7;
+}
+
+.no-padd {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#about-energy-heading, #solution-heading, #solar-heading, #csr-heading {
+    text-align: center;
+    font-size: 25px;
+
+}
+
+#solution {
+    color: black;
+    font-family: Snippet;
+    font-style: oblique;
+    font-size: 16px;
+    text-align: justify;
+}
+
+#member-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.devider {
+    background-color: #464646;
+    height: 1px;
+    margin: 12px auto 12px;
+    width: 100px;
+}
+
+#about-energy-heading {
+
+}
+
+.graphics {
+    width: 130px;
+    height: 100px;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin: 12px auto 12px;
+    margin-bottom: 12px;
+}
+
+#solution-img {
+    background-image: url(../images/infographics/solution.png);
+}
+
+#consulting-img {
+    margin-top: 18px;
+    background-image: url(../images/infographics/consulting.png);
+}
+
+#csr-img {
+    background-image: url(../images/infographics/csr.png);
+}
+
+#about-container {
+    /*background: red;*/
+    margin-right: 20px !important;
+    margin-left: 20px !important;
+}
+
+#about-energy-desc {
+    margin-left: 95px;
+    margin-right: 95px;
+    line-height: 30px;
+    text-align: center;
+    color: #777;
+    margin-top: 30px;
+}
+
+.home-project-details-text {
+    font-size: 20px;
+    color: #ccc;
+    text-align: center;
+}
+
+#footer {
+    background: #f8f8f8;
+    height: 200px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+#fb > a > img {
+    padding-top: 10px;
+}
+
+#tw > a > img {
+    padding-top: 13px;
+}
+
+#in > a > img {
+    padding-top: 7px;
+}
+
+#footer ul li {
+
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+
+#social-icons-container {
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#fb, #tw, #in {
+    width: 60px;
+    height: 60px;
+    margin-left: 25px;
+    border-radius: 50%;
+    background-color: #3C3C3C;
+}
+
+#social-icon-container li:hover {
+    background-color: #0070B9;
+}
+
+#email, #copy-right {
+    text-align: center;
+    font-size: 14px;
+    color: #c0c0c0;
+}
+
+#footer-text {
+    margin-left: 20px;
+}
+
+#signin-msg-container {
+    min-height: 25px;
+    text-align: center;
+}
+
+#signup-msg-container {
+    min-height: 25px;
+    text-align: center;
+}
+
+#profile {
+    background-color: #f8f8f8 !important;
+}
+
+#dash-link {
+    right: 0 !important;
+    left: none !important;
+}
+
+.dropdown-menu {
+    left: none !important;
+}
+
+#mob-welcome-login {
+    margin-top: 10px;
+}
+
+#mob-profile-link {
+    border: none !important;
+    color: #3B78E7;
+}
+
+/**********   faqa      ***********/
+.question {
+    color: #0070b9;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#how_it_works_text {
+    line-height: 35px;
+}
+
+#investment-summary-text {
+    border-bottom: 1px solid #ccc;
+}
+
+#transaction-details-text {
+    border-bottom: 1px solid #ccc;
+}
+
+#withdraw-now {
+    background-color: #ccc;
+    color: #fff;
+    height: 55px;
+    text-align: center;
+    padding-top: 17px;
+    border-radius: 35px;
+    width: 218px;
+    border: none;
+    position: relative;
+    margin: auto;
+}
+#withdraw-now:active {
+    border:5px solid #bbb;
+    background: #bbb;
+}
+/**********   faqs      ***********/
+@media screen and (max-width: 750px) {
+    #about-energy-desc {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    #banner {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}

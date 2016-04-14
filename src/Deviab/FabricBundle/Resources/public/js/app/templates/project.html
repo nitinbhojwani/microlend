@@ -1,0 +1,314 @@
+<style> 
+    .swiper-container {
+        width: 100%;
+        height: 300px;
+        margin: 20px auto;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        
+        /* Center slide text vertically */
+        display: block;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    .append-buttons {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .append-buttons a {
+        display: inline-block;
+        border: 1px solid #007aff;
+        color: #007aff;
+        text-decoration: none;
+        padding: 4px 10px;
+        border-radius: 4px;
+        margin: 0 10px;
+        font-size: 13px;
+    }
+    #demo1 .als-viewport {
+        width:87% !important;
+        height: 170px!important;
+        margin-right: 51px !important;
+    }
+    .als-container span {
+        width:3%;
+
+    }
+    #next-arrow {
+        right:0;
+    }
+    .swiper-button-next,.swiper-button-prev {
+        background: none !important;
+    }
+    .swiper-button-prev {
+        left:0 !important;
+    }
+    .swiper-slide img {
+        width:140px !important;
+        height: 140px !important;
+    }
+    .als-wrapper {
+        height: 165px !important;
+    }
+    .swiper-slide {
+        width: 140px !important;
+        height: 160px !important;
+        margin-right: 133px !important;
+    }
+    .swiper-wrapper {
+        margin-left: 62px !important;
+        margin-top: 65px !important;
+    }
+    </style>
+<div class="space"></div>
+<div class="container" ng-controller="ProjectController as pc">
+    <div id="project-details" class="row border-radius">
+        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+            <div id="project-details-table-container" class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <table class="table table-curved">
+                        <thead id="borrower_img">
+                            <tr>
+                                <th colspan="3"><h3 class="text-center">Loan Details</h3></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Loan Amount</td>
+                            <td>1,20,000</td>
+                        </tr>
+                        <tr>
+                            <td>Tenure</td>
+                            <td>8 Months</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+                <h3 class="text-center">Lytyfy Bihar </h3>
+
+                <div class="border"></div>
+                <div id="project-expl">
+                    <div class="space-25"></div>
+                    &nbsp &nbsp Energy is a prerequisite for all human endeavours. It is the absence of energy that makes us appreciate its  importance in various forms which we take for granted in our modern lives. But yet, millions of people in our country lead a life in the absence of a reliable source of energy. A Life without light which is unimaginable for many of us is a constant reality for millions of people. The story of Dhamdaha is something similar to the rest of the hinterlands of our country. Dhamdaha is located on the eastern side of Purnea town in the northeastern part of Bihar. Despite its proximity to the district headquarters, many villages in the block are yet to enjoy the privilege of reliable and affordable electricity. This has not deterred the spirits of the villagers and they continue to work hard, innovate and succeed in life. Youngsters in these villages continue to mesmerize their elders by the ever increasing use of technology in their day to day lives. Technology in the form of mobile phones, microfinance, core banking solutions have started to impact the lives of these people. One such technology that can solve their problems of energy is the Solar technology. Rural people living in these areas are enthusiastic about the utilisation of solar based energy. Many have already tried using solar home lighting systems and are extremely happy about the democratization of electricity as they feel that they can use it as per their needs. Youngsters get quality time of 4 hours after sunset to read under bright LED lights and others utilise the system for mobile charging, cooking, increase their productivity by keeping their shops open even after sunset. It is an economical deal for them in the long run as it easily beats other forms of fuel that they use. The promotion of clean and green technology in the rural areas will help make the planet a better place for future generations. Rural people find it difficult to pay for the system at one go and hence require assistance in the form of an Energy Loan which they shall repay in monthly instalments. The challenge is huge, scope is immense, willingness of the rural consumer is there! Come! Be part of the change. The villagers are willing to adopt the solar technology as they realise that it is highly beneficial for them. The only hurdle in their way is the availability of credit. As a first step, 50 interested rural customers have come forward to adopt the technology and they seek your assistance in changing their lives for better. You can have a look at their profiles below. 
+
+
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <div id="borrow_amount_details" class="container-fluid border-radius">
+                <h3> {[{raised}]}% Raised </h3>
+
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped active" role="progressbar"
+                         aria-valuenow="{[{raised}]}" aria-valuemin="0" aria-valuemax="100" style="width:{[{raised}]}%">
+                        {[{raised}]}%
+                    </div>
+                </div>            	
+                <form method="post" name="0.1_payuForm" action="https://secure.payu.in/_payment.php">
+                    <input id="form-key" type="hidden" name="key" ng-model="user.key">
+                    <input id="form-hash" type="hidden" name="hash">
+                    <input id="form-udf1" type="hidden" name="udf1">
+                    <input id="form-udf2" type="hidden" name="udf2">
+                    <input id="form-txnid" type="hidden" name="txnid">
+                    <input id="form-amount" class="form-control" name="amount" value=500>
+                    <div id="amount-errmsg-container" class="error space-30">
+                        <span id="amount-errmsg"></span>
+                    </div>
+                    <table style="display:none">
+                        <tr>
+                            <td><b>Mandatory Parameters</b></td>
+                        </tr>
+                        <tr>
+                            <td>First Name:</td>
+                            <td><input id="form-name" name="firstname"></td>
+                        </tr>
+                        <tr>
+                            <td>Email:</td>
+                            <td><input id="form-email" name="email"></td>
+                            <td>Phone:</td>
+                            <td><input id="form-phone" name="phone"></td>
+                        </tr>
+                        <tr>
+                            <td>Product Info:</td>
+                            <td colspan="3"><input id="form-productinfo" name="productinfo"></td>
+                        </tr>
+                        <tr>
+                            <td>Success URI:</td>
+                            <td colspan="3"><input id="form-surl" name="surl"
+                                                   size="64" ></td>
+                        </tr>
+                        <tr>
+                            <td>Failure URI:</td>
+                            <td colspan="3"><input id="form-furl" name="furl"
+                                                   size="64"></td>
+                        </tr>
+                        <tr>
+                            <td>Cancel URI:</td>
+                            <td colspan="3"><input id="form-curl" name="curl"
+                                                   size="64"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"><input id="form-service-provider" type="hidden" name="service_provider"
+                                                   size="64">
+                            </td>
+                        </tr>
+	                    <tr>
+
+	                        <h5>
+                                <button id="frm-proceed-button" type="submit" class="btn btn-primary" value=""
+                                        style="display:none">Proceed
+	                            </button>
+	                        </h5>
+	                    </tr>
+	                </table>
+                </form>
+                <button id="proceed-button" class="btn btn-primary form-control">Proceed
+                    </button>
+                    <div class="space-25"></div>
+            </div>
+        </div>
+    </div>
+    <div class="border space"></div>
+    <div class="row als-container" id="demo1">
+        <span class="als-prev"><img src="/bundles/fabric/images/left_arrow.png" alt="prev" title="previous"/></span>
+
+        <div class="als-viewport" >
+            <ul class="als-wrapper">
+                <li class="als-item"><img class="img-circle img-responsive" src="https://s3-ap-southeast-1.amazonaws.com/lytyfy/images/borrowers/AfzalMansuri.jpg"/><span>Afzal Mansuri</span>
+                <li class="als-item"><img class="img-circle img-responsive" src="https://s3-ap-southeast-1.amazonaws.com/lytyfy/images/borrowers/BarkuHasda.jpg"/><span>Barku Hasda</span>
+                <li class="als-item"><img class="img-circle img-responsive" src="https://s3-ap-southeast-1.amazonaws.com/lytyfy/images/borrowers/BrajeshKumar.jpg"/><span>Brajesh Kumar</span>
+                <li class="als-item"><img class="img-circle img-responsive" src="https://s3-ap-southeast-1.amazonaws.com/lytyfy/images/borrowers/DeepakKumar.jpg"/><span>Deepak Kumar</span>
+                <li class="als-item"><img class="img-circle img-responsive" src="https://s3-ap-southeast-1.amazonaws.com/lytyfy/images/borrowers/JaiKrishanSharma.jpg"/><span>Jaikrishan Sharma</span>
+                <li class="als-item"><img class="img-circle img-responsive" src="https://s3-ap-southeast-1.amazonaws.com/lytyfy/images/borrowers/KamleshwariPrasadSah.jpg"/><span>Kamleshwari Sah</span>
+                <li class="als-item"><img class="img-circle img-responsive" src="https://s3-ap-southeast-1.amazonaws.com/lytyfy/images/borrowers/KumodKumar.jpg"/><span>Kumod Kumar</span>
+                <li class="als-item"><img class="img-circle img-responsive" src="https://s3-ap-southeast-1.amazonaws.com/lytyfy/images/borrowers/MaryMurmu.jpg"/><span>Mary Murmu</span>
+                <li class="als-item"><img class="img-circle img-responsive" src="https://s3-ap-southeast-1.amazonaws.com/lytyfy/images/borrowers/MeenaHasda.jpg"/><span>Meena Hasda</span>
+                <li class="als-item"><img class="img-circle img-responsive" src="https://s3-ap-southeast-1.amazonaws.com/lytyfy/images/borrowers/NarendarKumar.jpg"/><span>Narendar Kumar</span>
+                <li class="als-item"><img class="img-circle img-responsive" src="https://s3-ap-southeast-1.amazonaws.com/lytyfy/images/borrowers/NeelamDevi.jpg"/><span>Neelam Devi</span>
+                <li class="als-item"><img class="img-circle img-responsive" src="https://s3-ap-southeast-1.amazonaws.com/lytyfy/images/borrowers/NeerajKumar.jpg"/><span>Neeraj Kumar</span>
+                <li class="als-item"><img class="img-circle img-responsive" src="https://s3-ap-southeast-1.amazonaws.com/lytyfy/images/borrowers/PraveenKumarMishra.jpg"/><span>Praveen Mishra</span>
+                <li class="als-item"><img class="img-circle img-responsive" src="https://s3-ap-southeast-1.amazonaws.com/lytyfy/images/borrowers/RanjanDevi.jpg"/><span>Ranjan Devi</span>
+                <li class="als-item"><img class="img-circle img-responsive" src="https://s3-ap-southeast-1.amazonaws.com/lytyfy/images/borrowers/ShawendraKumarMandal.jpg"/><span>Shawendra Mandal</span>
+                <li class="als-item"><img class="img-circle img-responsive" src="https://s3-ap-southeast-1.amazonaws.com/lytyfy/images/borrowers/SiyacharanSharma.jpg"/><span>Siyacharan Sharma</span>
+                <li class="als-item"><img class="img-circle img-responsive" src="https://s3-ap-southeast-1.amazonaws.com/lytyfy/images/borrowers/TalaTuddu.jpg"/><span>Tala Tuddu</span>
+                <li class="als-item"><img class="img-circle img-responsive" src="https://s3-ap-southeast-1.amazonaws.com/lytyfy/images/borrowers/UmaDevi.jpg"/><span>Uma Devi</span>
+            </ul>
+        </div>
+        <span id="next-arrow" class="als-next"><img src="/bundles/fabric/images/right_arrow.png" alt="next" title="next"/></span>
+    </div>
+    <h3 class="text-center">Borrowers</h3>
+    <div class="border"></div>
+    <div class="swiper-container container-fluid">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" ng-repeat="lender in projectResponce.lenders"><img class="img-circle img-responsive" src="https://s3-ap-southeast-1.amazonaws.com/lytyfy/web_assets/profile.jpg" width="140" height="140"><figcaption><br>{[{lender.name}]}</figcaption></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"><img src="/bundles/fabric/images/right_arrow.png" alt="prev" title="previous"/></div>
+        <div class="swiper-button-prev"><img src="/bundles/fabric/images/left_arrow.png" alt="prev" title="previous"/></div>
+    </div>
+    <h3 class="text-center">Lenders</h3>
+    <div class="border"></div>
+    <div class="space"></div>
+
+
+</div>
+<div>
+   
+    <!-- Swiper JS -->
+
+
+    <!-- Initialize Swiper -->
+    <script>
+    var appendNumber = 4;
+    var prependNumber = 1;
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        slidesPerView: 4,
+        centeredSlides: false,
+        paginationClickable: true,
+        spaceBetween: 0,
+    });
+    </script>
+
+<script>
+    var h = $(window).width();
+    var visible_count = 4;
+    var scrolling_count = 2;
+    if (h < 600) {
+        visible_count = 2;
+        scrolling_count = 1;
+    } else if (h < 1080) {
+        visible_count = 3;
+        scrolling_count = 1;
+    }
+    $("#demo1").als({
+        visible_items: visible_count,
+        scrolling_items: scrolling_count,
+        orientation: "horizontal",
+        circular: "no",
+        autoscroll: "no"
+    });
+
+    $('#proceed-button').click(function () {
+        var amount = $("#form-amount").val();
+        // if(amount < 500) {
+        //     $("#amount-errmsg").html("Please Enter 500 or more than 500 Amount.").show().fadeOut(4000);
+        //     return;
+        // }
+        // $('#proceed-button').prop('disabled', true);
+        $(".se-pre-con-login").show();
+		var res = $.get('/api/v1/lenders/4/fd?amount='+amount);
+		res.success(function(data, status, headers, config) {
+			console.log(data);
+			fillFormValue(data);
+		});
+		res.error(function(data, status, headers, config) {
+            //alert("failure message: " + JSON.stringify({data: data}));
+            $(".se-pre-con-login").hide();
+           $("#login-btn").trigger("click");
+			console.log( "failure message: " + JSON.stringify({data: data}));
+		});
+
+		function fillFormValue(data) {
+            console.log(data);
+			$('#form-name').val(data.firstname);
+			$('#form-surl').val(data.surl);
+			$('#form-email').val(data.email);
+			$('#form-hash').val(data.hash);
+			$('#form-key').val(data.key);
+			$('#form-phone').val(data.phone);
+			$('#form-productinfo').val(data.productinfo);
+			$('#form-service-provider').val(data.service_provider);
+			$('#form-furl').val(data.furl);
+            $('#form-curl').val(data.curl);
+            $('#form-udf1').val(data.udf1);
+            $('#form-udf2').val(data.udf2);
+            $('#form-txnid').val(data.txnid);
+            $("#frm-proceed-button").click();
+		}    	
+    });
+    $(document).ready(function () {
+        $("#form-amount").keypress(function (e) {
+            if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                $("#amount-errmsg").html("Digits Only").show().fadeOut("slow");
+                   return false;
+            }
+        });
+    });
+</script>

@@ -1,0 +1,106 @@
+.navbar-collapse {
+    width: ff !important;
+}
+
+/*.logo {
+    font-family: menlo !important;
+    font-size: 38px !important;
+    color: #0070B9 !important;
+    background-image: url(../images/newlogo.jpg);
+    background-repeat: no-repeat;
+    margin-top: 17px;
+    font-weight: normal !important;
+}*/
+/*#login-btn-container {
+    position: absolute;
+    left: 90%;
+    top: 33%;
+}*/
+#login-btn {
+    vertical-align: bottom;
+}
+
+#sub {
+    font-style: italic;
+    color: #0070B9;
+    width: 290px;
+    letter-spacing: normal;
+    text-align: right;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #909090;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    font-weight: bold;
+}
+
+.nav {
+    margin-top: 26px;
+}
+
+.navbar-default {
+    background-color: #F8F8F8 !important;
+    border-bottom: 3px solid #F8F8F8 !important;
+    /*  -moz-box-shadow: 0 1px 5px 0 rgba(0,0,0,.3) inset;
+      -webkit-box-shadow: 0 1px 5px 0 rgba(0,0,0,.3) inset;
+      box-shadow: 0 1px 5px 0 rgba(0,0,0,.3) inset;*/
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    color: #0070B9 !important;
+}
+
+.navbar {
+    font-size: 15px;
+    min-height: 43px;
+    margin-bottom: 0px !important;
+    border: 1px solid transparent;
+    margin-right: 62px;
+
+}
+
+/*.nav>li>a:focus, .nav>li>a:hover {
+text-decoration: none;
+background-color: #0000cc !important;
+color: rgb(0, 112, 185) !important;
+}*/
+.navbar {
+    position: fixed !important;
+    width: 100%;
+    z-index: 55;
+}
+
+#welcome-user, #nav-profile-span {
+    color: #0070B9;
+    font-weight: bold;
+}
+
+#welcome-login {
+    margin-top: 30px;
+}
+
+#nav-profile-link:hover {
+
+}
+
+.go-to-link {
+    color: #0070B9;
+    font-weight: bold;
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background: none !important;
+}
+
+@media screen and (max-width: 550px) {
+
+    .logo {
+        font-size: 45px !important;
+    }
+}
+
+@media screen and (min-width: 806px) {
+    .collapsing {
+        overflow: visible;
+    }
+}

@@ -1,0 +1,4 @@
+services:
+#    fabric.example:
+#        class: FabricBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

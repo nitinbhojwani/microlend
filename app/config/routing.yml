@@ -1,0 +1,26 @@
+deviab_platform:
+    resource: "@DeviabPlatformBundle/Resources/config/routing.yml"
+    prefix:   /
+
+deviab_login:
+    resource: "@DeviabLoginBundle/Resources/config/routing.yml"
+    prefix:   /
+
+deviab_repayment:
+    resource: "@DeviabRepaymentBundle/Resources/config/routing.yml"
+    prefix:   api/v1/repayment
+    type:     rest
+
+fabric:
+    resource: "@FabricBundle/Resources/config/routing.yml"
+    prefix:   /
+
+deviab_lender:
+    resource: "@DeviabTransactionBundle/Resources/config/routing.yml"
+    prefix:    api/v1/lenders
+    type:      rest
+
+deviab_project:
+    resource: "@DeviabBorrowerBundle/Resources/config/routing_project.yml"
+    prefix:    api/v1/projects
+    type:      rest

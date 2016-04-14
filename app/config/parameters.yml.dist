@@ -1,0 +1,21 @@
+# This file is a "template" of what your parameters.yml file should look like
+parameters:
+    database_driver: pdo_mysql
+    database_host: db-host
+    database_port: 3306
+    database_name: db_name
+    database_user: db_user
+    database_password: db_password
+
+    # You should uncomment this if you want use pdo_sqlite
+    # database_path: "%kernel.root_dir%/data.db3"
+
+    mailer_transport: smtp
+    mailer_host:      mailer_host
+    mailer_user:      mailer_user
+    mailer_password:  mailer_password
+
+    locale:            en
+
+    # A secret key that's used to generate certain security-related tokens
+    secret:            ThisTokenIsNotSoSecretChangeIt

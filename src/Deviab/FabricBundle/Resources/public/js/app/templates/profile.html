@@ -1,0 +1,93 @@
+<style>
+.edittext {
+    height:26px; 
+    padding:5px;
+    color: #1e5c94;
+    background:#dbe5ee;
+}
+#profile-text {
+font-size: 35px;
+color: #1e5c94;
+margin: 0 auto;
+margin-bottom:10px;
+}
+#profile-update-btn {
+    background: #00aeef;
+    color:#ffffff;
+    width:70%;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+#profile-update-btn:hover {
+    background: #009eef; 
+}
+#edit-mobile, #edit-email {
+    cursor: pointer;
+}
+</style>
+<div class="container dialog-container">
+    <div class="modal fade" id="profile-model" role="dialog">
+        <div class="modal-dialog" style="width:35%">
+            <div id="profile-model" class="modal-content">
+                    <div class="container-fluid">
+                        <button id="profile-closs" type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                <div class="modal-body container-fluid bottom-25">
+                    <div class="container-fluid">
+            
+                <div id="profile-text" class="text-center">
+                    <span >Profile</span>
+                </div>
+                <div class="panel-body" style="margin:0; padding:2px 15px;">
+
+                    <div class="low-opacity">
+                        <img src="/static/images/name.png"  style="display:inline; margin:4px;">
+                        <input id="profile-name" type="text" class="edittext" placeholder="Name" disabled/>
+                    </div>
+
+                    <div class="low-opacity">
+                        <img src="/static/images/address.png"  style="display:inline; margin:4px">
+                        <input id="profile-address" type="text" class="edittext" placeholder="Address" disabled/>   
+                    </div>
+
+                    <div class="low-opacity">
+                        <img src="/static/images/city.png"  style="display:inline; margin:4px">
+                        <input id="profile-city" type="text" class="edittext" placeholder="City" disabled/>  
+                    </div>
+
+                    <div class="low-opacity">
+                        <img src="/static/images/state.png"  style="display:inline; margin:4px">
+                        <input id="profile-state" type="text" class="edittext" placeholder="State" disabled/>     
+                    </div>
+
+                    <div class="low-opacity">
+                        <img src="/static/images/pincode.png"  style="display:inline; margin:4px">
+                        <input id="profile-pincode" type="text" class="edittext" placeholder="PinCode" disabled/>       
+                    </div>
+
+                    <div>
+                        <img src="/static/images/email.png"  style="display:inline; margin:4px">
+                        <input id="profile-edit-email" type="text" class="edittext low-opacity profile-editable" placeholder="Email" disabled/>  
+                        <img id="edit-email" class="editable-link" src="/static/images/edit_icon.png"  style="display:inline; margin:4px;">   
+                    </div>
+
+                    <div>
+                        <img src="/static/images/mobile.png" style="display:inline; margin:4px">
+                        <input id="profile-edit-mobile" type="text" class="edittext profile-editable low-opacity" placeholder="Mobile" disabled/> 
+                        <img id="edit-mobile" class="editable-link" src="/static/images/edit_icon.png"  style="display:inline; margin:4px;">
+                    </div>
+
+                    <div style= "text-align: center; margin:10px 0px 0px 30px;">
+                        <button id="profile-update-btn" type="button" class="btn" disabled/>Update</button>
+                    </div>
+                    <div style="text-align: center;">
+                        <span id="error-msg" style="color:#DA5B5B;min-height:16px"></span>
+                    </div>
+
+                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

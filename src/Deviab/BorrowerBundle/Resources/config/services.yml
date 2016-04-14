@@ -1,0 +1,5 @@
+services:
+  project_service:
+        class: Deviab\BorrowerBundle\Services\ProjectService
+        arguments: [@doctrine, @deviab_platform.mailer]
+

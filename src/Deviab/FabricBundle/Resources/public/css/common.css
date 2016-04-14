@@ -1,0 +1,117 @@
+.grey-border {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border: 1px solid #ccc;
+}
+
+.border {
+    border-bottom: 1px solid #ccc;
+}
+
+.space {
+    height: 50px;
+}
+ 
+ .h-25 {
+    min-height: 25px;
+ }
+.space-30 {
+    height: 30px;
+}
+
+.space-25 {
+    height: 25px;
+}
+
+.space-10 {
+    height: 10px;
+}
+
+.error {
+    color: red;
+}
+
+.no-right-padd {
+    padding-right: 0px !important;
+}
+
+.no-left-padd {
+    padding-left: 0px !important;
+}
+
+.no-padd {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.border-margin {
+    border-bottom: 1px solid #ccc;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.loading {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    min-width: 50px;
+    height: 18px;
+    display: inline-block;
+    background: url(/bundles/fabric/images/loading_bar.gif);
+
+}
+
+.table-curved {
+    border-collapse: separate;
+}
+.table-curved {
+    border: solid #ccc 1px;
+    border-radius: 6px;
+    border-left:0px;
+}
+.table-curved td, .table-curved th {
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+}
+.table-curved th {
+    border-top: none;
+}
+.table-curved th:first-child {
+    border-radius: 6px 0 0 0;
+}
+.table-curved th:last-child {
+    border-radius: 0 6px 0 0;
+}
+.table-curved th:only-child{
+    border-radius: 6px 6px 0 0;
+}
+.table-curved tr:last-child td:first-child {
+    border-radius: 0 0 0 6px;
+}
+.table-curved tr:last-child td:last-child {
+    border-radius: 0 0 6px 0;
+}
+
+.no-margn {
+    margin-right: 5px !important;
+}
+
+.no-rmargn {
+    margin-right: 0px !important;
+}
+
+.tmrgn-50 {
+    margin-top: 50px;
+}
+
+.tmrgn-25 {
+    margin-top: 25px;
+}
+.m-b-20 {
+    margin-bottom: 20px;
+}

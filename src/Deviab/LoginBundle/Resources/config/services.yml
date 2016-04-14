@@ -1,0 +1,8 @@
+services:
+#    deviab_login.example:
+#        class: Deviab\LoginBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
+
+    lender_service:
+        class: Deviab\LoginBundle\Services\LenderService
+        arguments: [@doctrine]

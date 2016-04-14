@@ -1,0 +1,39 @@
+Deviab\DatabaseBundle\Entity\LoanOperationalStrategies:
+    type: entity
+    table: loan_operational_strategies
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        principalAmount:
+            type: float
+            nullable: false
+            precision: 10
+            scale: 0
+            comment: ''
+            column: principal_amount
+        tenure:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            default: '1'
+        rateOfInterrest:
+            type: float
+            nullable: false
+            precision: 10
+            scale: 0
+            comment: ''
+            column: rate_of_interrest
+        campaignDate:
+            type: date
+            nullable: false
+            comment: ''
+            column: campaign_date
+    lifecycleCallbacks: {  }

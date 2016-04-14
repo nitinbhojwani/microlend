@@ -1,0 +1,82 @@
+#project-details-container {
+    margin-top: 5%;
+}
+
+#light-a-life {
+    font-size: 180%;
+    color: #0770B9;
+    height: 32px;
+    text-align: center;
+}
+
+.project-details {
+    background-color: #0070B9;
+    color: #fff;
+    height: 55px;
+    text-align: center;
+    padding-top: 15px;
+    border-radius: 35px;
+    width: 218px;
+    border: none;
+    position: relative;
+    margin: auto;
+}
+
+#invest-now {
+    background-color: #14B900;
+}
+
+#info-graphics-container {
+    margin-top: 20px;
+}
+
+#first-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#register-btn {
+
+}
+
+a#register-btn:hover {
+    cursor: pointer;
+    list-style: none;
+    color: red;
+    text-decoration: none;
+}
+
+div#invest-now:hover {
+    background-color: #149C3C;
+    border: 2px solid #149C3C
+}
+
+/***   Media Scrren CSS      ******/
+/*@media screen and (max-width: 680px) {
+	#learn-more {
+		background-color: #0070B9;
+		color: #fff;
+		height: 35px;
+		text-align: center;
+		margin-top: 25px;
+		border-radius: 35px;
+		width:100px;
+		border: none;
+	}
+
+	.project-details {
+		background-color: #9c9c9c;
+		color: #fff;
+		height: 35px;
+		text-align: center;
+		margin-top: 5px;
+		padding-top: 5px;
+		border-radius: 35px;
+		width:100px;
+		border: none;
+		font-size: 10px;
+	}
+}*/

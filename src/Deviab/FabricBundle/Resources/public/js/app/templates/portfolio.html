@@ -1,0 +1,85 @@
+<div class="container" ng-controller="PortfolioController as pc">
+    <h2>Light is a Right</h2>
+
+    <div class="border">
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <div id="borrower_img">
+            <img class="menu-type img-responsive" ng-src="/bundles/fabric/images/portfolio.jpg" alt="loding...."
+                 src="/bundles/fabric/images/portfolio.jpg">
+        </div>
+    </div>
+    <div id="borrower_details_heading" class="col-lg-6 col-md-3 col-sm-12 col-xs-12">
+        <h2 style="margin-top:3px;margin-bottom:3px;">
+            {[{portfolioResponce.borrower.fname}]}
+            {[{portfolioResponce.borrower.lname}]},
+            {[{portfolioResponce.borrower.tolla}]}
+        </h2>
+
+        <div id="portfolio_social_share" class="container-fluid">
+            <lable class="fb-share-button" data-href="http://www.deviab.com" data-layout="button_count"></lable>
+            <ul>
+                <lable id="portfolio-share-header">Share on social media</lable>
+                <a href="" target="_blank">
+                    <li id="portfolio_fb"></li>
+                </a>
+                <a href="https://twitter.com/@deviab_energy" target="_blank">
+                    <li id="portfolio_tw"></li>
+                </a>
+                <a href="#">
+                    <li id="portfolio_in"></li>
+                </a>
+            </ul>
+        </div>
+        <div class="border">
+        </div>
+    </div>
+
+    <div id="borrow_amount_details" class="col-lg-3 col-md-6 col-sm-6 col-xs-6">
+        <h4 class="text-left"> Loan Amount :
+            {[{portfolioResponce.borrowerStory.operational_strategy.principal_amount}]} </h4>
+
+        <div class="container-fluid" style="height:20px; background-color:#0070B9"></div>
+        <h4 class="text-left"> Needed Amount : 3000 </h4>
+        <input type="text" class="form-control" id="amount" placeholder="Enter the Amount">
+        <h5>
+            <button id="procced-button" type="button" class="btn btn-primary">Procced</button>
+        </h5>
+    </div>
+    <div id="loan_details" class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th colspan="3"><h3 class="text-center">Loan details</h3></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Loan Amount</td>
+                <td>{[{portfolioResponce.borrowerStory.operational_strategy.principal_amount}]}</td>
+            </tr>
+            <tr>
+                <td>tenure</td>
+                <td>{[{portfolioResponce.borrowerStory.operational_strategy.tenure}]}</td>
+            </tr>
+            <tr>
+                <td>Interest Rate</td>
+                <td>{[{portfolioResponce.borrowerStory.operational_strategy.rate_of_interrest}]}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="borrower-story">
+        {[{portfolioResponce.borrowerStory.user_story}]}
+    </div>
+    <div id="fb-root"></div>
+    <script>(function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=1488571578120739";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+</div>

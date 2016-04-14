@@ -1,0 +1,4 @@
+services:
+  repayment_service:
+        class: Deviab\RepaymentBundle\Services\RepaymentService
+        arguments: [@doctrine]

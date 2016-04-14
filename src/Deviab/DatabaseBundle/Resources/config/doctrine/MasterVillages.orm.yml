@@ -1,0 +1,35 @@
+Deviab\DatabaseBundle\Entity\MasterVillages:
+    type: entity
+    table: master_villages
+    indexes:
+        fk_panchayat_id_idx:
+            columns:
+                - panchayat_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        villageName:
+            type: string
+            nullable: true
+            length: 45
+            fixed: false
+            comment: ''
+            column: village_name
+    manyToOne:
+        panchayat:
+            targetEntity: MasterPanchayat
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                panchayat_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

@@ -11,6 +11,7 @@
 /vendor/
 /.idea
 /app/config/parameters.yml
+*.DS_Store
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
